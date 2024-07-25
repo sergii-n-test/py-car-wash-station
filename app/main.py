@@ -4,7 +4,7 @@ class Car:
     ) -> None:
         self.comfort_class = comfort_class
         self.clean_mark = clean_mark
-        self.brand = 'BMW'
+        self.brand = brand
 
 
 class CarWashStation:
@@ -29,7 +29,6 @@ class CarWashStation:
         cost = (
             car.comfort_class * (self.clean_power - car.clean_mark)
             * self.average_rating / self.distance_from_city_center
-            * 0
         )
         return round(cost, 1)
 
