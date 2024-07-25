@@ -33,11 +33,11 @@ class CarWashStation:
         )
         return round(cost, 1)
 
-    def wash_single_car(self, car: Car) -> int:
+    def wash_single_car(self, car: Car) -> None:
         if self.clean_power > car.clean_mark:
             car.clean_mark = self.clean_power
 
-    def rate_service(self, new_rating: float) -> int:
+    def rate_service(self, new_rating: float) -> None:
         total_rating = self.average_rating * self.count_of_ratings
         self.count_of_ratings += 1
         self.average_rating = round(
